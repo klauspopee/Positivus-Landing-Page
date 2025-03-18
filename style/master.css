@@ -1,0 +1,266 @@
+/* Start Global rules */
+:root {
+    /* Desktop font sizes */
+    --h1:60px;
+    --h2:40px;
+    --h3:30px;
+    --h4:20px;
+    --p:18px;
+    /* Mobile font sizes */
+    --h1-m:43px;
+    --h2-m:36px;
+    --h3-m:26px;
+    --h4-m:18px;
+    --p-m:16px;
+    /* Colors */
+    --green:#B9FF66;
+    --dark:#191A23;
+    --grey:#F3F3F3;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+/* Media Queries */
+@media (min-width: 768px) { 
+    .container {
+        width: 750px;
+    }
+    .icon {
+        display: none;
+    }
+}
+@media (min-width: 992px) { 
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1400px) { 
+    .container {
+        width: 1270px;
+        padding: 0 100px;
+    }
+}
+/* End Global rules */
+/* Start Landign  */
+    .landing .container nav {
+        display: flex;
+    }
+    .landing .container nav ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    .landing .container nav .logo {
+        display: flex;
+        align-items: center;
+    }
+    .landing .container nav .logo span {
+        color: var(--dark);
+    }
+    .landing .container nav .logo i {
+        color: var(--dark);
+    }
+    .landing .container nav .links a {
+        text-decoration: none;
+        color: var(--dark);
+        cursor: pointer;
+        transition: .3s;
+    }
+    .landing .container nav .links a:hover {
+        color: var(--green);
+    }
+    /* small devices */
+    @media (max-width:767px) {
+        .container {
+            width: 90vw;
+            margin: 30px auto;
+        }
+        .landing .container nav {
+            justify-content: space-between;
+            align-items: center;
+        }
+        .landing .container nav ul {
+            display: none;
+        }
+        .landing .container nav .logo span {
+            font-size: 22px;
+            margin-left: 5px;
+        }
+        .landing .container nav .logo i {
+            font-size: 22px;
+        }
+        .landing .container nav .links {
+            position: relative;
+            height: 23px;
+        }
+        .landing .container nav .links a {
+            font-size: var(--p-m);
+        }
+        .landing .container nav .links .icon {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            right: 0;
+            width: 30px;
+            height: 100%;
+            padding-top: 5px;
+        }
+        .landing .container nav .links .icon span {
+            display: block;
+            background-color: var(--dark);
+            height: 2px;
+            border-radius: 5px;
+        }
+        .landing .container nav .links .icon span:first-child {
+            width: 100%;
+        }
+        .landing .container nav .links .icon span:nth-child(2) {
+            width: 60%;
+            transition: .3s;
+        }
+        .landing .container nav .links:hover .icon span:nth-child(2) {
+            width: 100%;
+        }
+        .landing .container nav .links .icon span:last-child {
+            width: 100%;
+        }
+        .landing .container nav .links .icon span:not(:last-child) {
+            margin-bottom: 4px;
+        }
+        .landing .container nav .links:hover ul {
+            display: block;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin:22px;
+            padding: 0;
+        }
+        .landing .container nav .links:hover ul li  {
+            padding: 7px;
+        }
+        .landing .container nav .links:hover ul li:not(:last-child) {
+            border-bottom: 1px solid var(--dark);
+            transition: .3s;
+        }
+        .landing .container nav .links:hover ul li:hover:not(:last-child) {
+            padding-left: 20px;
+        }
+        .landing .container nav .links:hover ul li button {
+            border:1px solid;
+            background-color: var(--grey);
+            border-color: transparent var(--dark) transparent var(--dark);
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+    /* large devices */
+    @media (min-width:768px) {
+        .container {
+            width: 90vw;
+            margin: 30px auto;
+        }
+        .landing .container nav {
+            justify-content: space-between;
+            align-items: center;
+        }
+        .landing .container nav .logo span {
+            font-size: 25px;
+            margin-left: 10px;
+        }
+        .landing .container nav .logo i {
+            font-size: 25px;
+        }
+        .landing .container nav .links ul li a {
+            font-size: var(--p);
+        }
+        .landing .container nav .links ul li:not(:last-child) {
+            margin-left: 20px;
+        }
+        .landing .container nav .links ul li:last-child {
+            margin-left: 60px;
+        }
+        .landing .container nav .links ul li button {
+            background-color: transparent;
+            border-color: transparent var(--dark) transparent var(--dark);
+            border-radius: 14px;
+            padding: 15px;
+            cursor: pointer;
+        }
+    }
+/* End Landign */
+/* Start Header */
+header  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url(../imgs/Illustration.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+header .infos button {
+    background-color: var(--dark);
+    color: var(--grey);
+    border-radius: 14px;
+    cursor: pointer;
+    border-color: transparent;
+    transition: .3s;
+}
+header .infos button:hover {
+    color: var(--green);
+}
+@media (max-width:576px) {
+    header {
+        margin: 20px auto;
+        background-size: 45vh;
+        background-position: center center;
+        gap: 35vh;
+    }
+    header h1 {
+    }
+    header img {
+        width: 100%;
+    }
+    header .infos {
+        margin: 10px 0;
+    }
+    header .infos p {
+        color: var(--dark);
+        font-size: var(--p-m);
+        line-height: 1.8;
+    }
+    header .infos button {
+        width: 100%;
+        height: 60px;
+
+    }
+}
+@media (min-width:577px) {
+    header {
+        margin: 40px auto;
+        background-size: 450px;
+    }
+    header h1 {
+        width: 50vw;
+        color: var(--dark);
+        font-size: var(--h1);
+        height: fit-content;
+        margin: 10px;
+
+    }
+    header .infos {
+        width:50vw;
+    }
+    header .infos p {
+        color: var(--dark);
+        font-size: var(--p);
+        line-height: 1.8;
+    }
+    header .infos button {
+        width: 264px;
+        height: 60px;
+
+    }
+}
+/* End Header */
