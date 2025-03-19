@@ -42,6 +42,40 @@
     }
 }
 /* End Global rules */
+/* Start Components */
+.sub-heading {
+    display: flex;
+    align-items: center;
+}
+.sub-heading h2 {
+    background-color: var(--green);
+    font-weight: 500;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+@media (min-width:577px) {
+    .sub-heading h2 {
+        margin-right: 40px;
+    }
+    .sub-heading p {
+        max-width: 550px;
+    }
+    
+}
+@media (max-width:576px) {
+    .sub-heading {
+        flex-direction: column;
+    }
+    .sub-heading p {
+        text-align: center;
+    }
+}
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+}
+/* End Components */
 /* Start Landign  */
     .landing .container nav {
         display: flex;
@@ -276,33 +310,7 @@ header .infos button:hover {
 }
 /* End logotypes */
 /* Start Services */
-.services-title {
-    display: flex;
-    align-items: center;
-}
-.services-title h2 {
-    background-color: var(--green);
-    font-weight: 500;
-    padding: 10px 5px;
-    border-radius: 5px;
-}
-@media (min-width:577px) {
-    .services-title h2 {
-        margin-right: 40px;
-    }
-    .services-title p {
-        max-width: 550px;
-    }
-    
-}
-@media (max-width:576px) {
-    .services-title {
-        flex-direction: column;
-    }
-    .services-title p {
-        text-align: center;
-    }
-}
+
 
 .services {
     display: grid;
@@ -384,7 +392,7 @@ header .infos button:hover {
     margin-left: 15px;
 }
 @media (max-width:576px) {
-    .learn-more a {
+    .services .card .learn-more a {
         display: none;
     }
 }
@@ -494,3 +502,49 @@ header .infos button:hover {
     
 }
 /* End cta block */
+/* Start case studies block */
+.case-studies-block {
+    background-color: #191A23;
+    margin: 70px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 45px;
+}
+@media (max-width:576px) {
+    .case-studies-block {
+        padding: 30px 20px;
+        flex-direction: column;
+    }
+    .case-column {
+        width: 100%;
+    }
+}
+@media (min-width:577px) {
+    .case-studies-block {
+        padding: 70px 60px;
+    }
+    .case-column {
+        width: 35%;
+    }
+}
+
+.case-studies-block p {
+    color: white;
+    line-height: 1.8;
+}
+.case-studies-block .learn-more {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.case-studies-block .learn-more a {
+    margin-right: 15px;
+    margin-left: 0;
+    color: white;
+}
+.case-studies-block .learn-more a:hover {
+    color: var(--green);
+}
+/* End case studies block */
