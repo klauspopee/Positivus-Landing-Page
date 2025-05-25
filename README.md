@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imgs/noun-sparkle-6753689.svg" alt="Positivus Logo" width="200"/>
+  <img src="imgs/Icon.svg" alt="Positivus Logo" width="200"/>
 </p>
 
 #  Positivus Landing Page 
